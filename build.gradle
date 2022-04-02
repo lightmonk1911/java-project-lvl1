@@ -28,3 +28,7 @@ compileJava {
 test {
     useJUnitPlatform()
 }
+
+run {
+    standardInput = System.in
+}
