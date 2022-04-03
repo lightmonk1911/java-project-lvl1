@@ -5,11 +5,11 @@ public final class CalcGame implements Game {
 
     private static final String DESCRIPTION = "What is the result of the expression?";
     private static final String[] OPERATORS = {"+", "-", "*"};
-    private static final int MAX_NUMBER = 100;
+    private static final int MAX_NUMBER = 10;
 
     @Override
     public Question nextQuestion() {
-        int operatorIndex = (int) (Math.random() * 2);
+        int operatorIndex = (int) (Math.random() * OPERATORS.length);
         String operator = OPERATORS[operatorIndex];
         int left = (int) (Math.random() * MAX_NUMBER);
         int right = (int) (Math.random() * MAX_NUMBER);
