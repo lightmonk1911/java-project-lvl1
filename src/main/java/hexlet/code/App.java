@@ -2,11 +2,14 @@ package hexlet.code;
 
 import java.util.Scanner;
 
+import hexlet.code.games.CalcGame;
 import hexlet.code.games.EvenGame;
-import hexlet.code.games.Greet;
+import hexlet.code.games.Game;
+import hexlet.code.games.GameEngine;
 
 public class App {
-    private static final String[] GAMES = {"Greet", "Even"};
+    private static final String GREET_KEY = "Greet";
+    private static final String[] GAMES = {GREET_KEY, EvenGame.KEY, CalcGame.KEY};
 
     public static void showMenu() {
         System.out.println("Please enter the game number and press Enter.");
@@ -24,7 +27,7 @@ public class App {
         int gameNumber = scanner.nextInt();
 
         if (gameNumber == 0) {
-            return "Exit";
+            return null;
         }
 
         return GAMES[gameNumber - 1];
@@ -32,14 +35,33 @@ public class App {
 
     public static void main(String[] args) {
         showMenu();
-        String game = askUserToSelectGame();
+        String gameKey = askUserToSelectGame();
 
-        switch (game) {
-            case ("Greet") -> Greet.play();
-            case ("Even") -> EvenGame.play();
+        if (gameKey == null) {
+            return;
+        }
+
+        Game game;
+        switch (gameKey) {
+            case (EvenGame.KEY) -> {
+                game = new EvenGame();
+            }
+
+            case (CalcGame.KEY) -> {
+                game = new CalcGame();
+            }
+
+            case (GREET_KEY) -> {
+                Cli.meetUser();
+                return;
+            }
             default -> {
-
+                return;
             }
         }
+
+        String userName = Cli.meetUser();
+        GameEngine gameEngine = new GameEngine(game, userName);
+        gameEngine.play();
     }
 }
