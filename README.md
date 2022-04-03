@@ -4,4 +4,7 @@
 [![Build status](https://github.com/lightmonk1911/java-project-lvl1/workflows/build/badge.svg)](https://github.com/lightmonk1911/java-project-lvl1/actions)
 
 #### How to play "Even" game:
-[![asciicast](https://asciinema.org/a/FoslLFosPoBhYJ1vCZxpHGwBN.png)](https://asciinema.org/a/FoslLFosPoBhYJ1vCZxpHGwBN)
+https://asciinema.org/a/FoslLFosPoBhYJ1vCZxpHGwBN
+
+#### How to play "Calc" game:
+https://asciinema.org/a/VHlJYMdeYOesHEIp5tO2L8Flw
