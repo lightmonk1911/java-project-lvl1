@@ -17,13 +17,4 @@ public class Cli {
     public static void greet(String name) {
         System.out.println("Hello, " + name);
     }
-
-    public static void showIncorrectAnswer(String correctAnswer, String answer, String name) {
-        System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + correctAnswer + "'");
-        System.out.println("Let's try again, " + name + "!");
-    }
-
-    public static void congratulate(String name) {
-        System.out.println("Congratulations, " + name);
-    }
 }

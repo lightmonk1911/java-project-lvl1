@@ -13,6 +13,15 @@ public class EvenGame {
         System.out.println(DESCRIPTION);
     }
 
+    private static void showLoseMessage(String correctAnswer, String answer, String name) {
+        System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + correctAnswer + "'");
+        System.out.println("Let's try again, " + name + "!");
+    }
+
+    private static void showWinMessage(String name) {
+        System.out.println("Congratulations, " + name);
+    }
+
     public static void play() {
         Cli.welcome();
         String userName = Cli.askName();
@@ -33,11 +42,11 @@ public class EvenGame {
             if (answer.equals(correctAnswer)) {
                 correctAnswersCount++;
             } else {
-                Cli.showIncorrectAnswer(correctAnswer, answer, userName);
+                showLoseMessage(correctAnswer, answer, userName);
                 return;
             }
         }
 
-        Cli.congratulate(userName);
+        showWinMessage(userName);
     }
 }
