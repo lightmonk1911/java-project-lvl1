@@ -15,7 +15,7 @@ public class Cli {
     }
 
     private static void greet(String name) {
-        System.out.println("Hello, " + name);
+        System.out.println("Hello, " + name + "!");
     }
 
     public static String meetUser() {

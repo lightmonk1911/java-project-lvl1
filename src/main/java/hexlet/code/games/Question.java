@@ -19,8 +19,8 @@ public final class Question {
         return Objects.equals(userAnswer, this.answer);
     }
 
-    public Question(String question, String answer) {
-        this.answer = answer;
-        this.question = question;
+    public Question(String questionText, String correctAnswer) {
+        this.answer = correctAnswer;
+        this.question = questionText;
     }
 }

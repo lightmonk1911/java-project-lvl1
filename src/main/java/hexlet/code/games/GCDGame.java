@@ -30,8 +30,8 @@ public final class GCDGame implements Game {
 
     @Override
     public Question nextQuestion() {
-        int first = (int) (Math.random() * MAX_NUMBER);
-        int second = (int) (Math.random() * MAX_NUMBER);
+        int first = 1 + (int) (Math.random() * MAX_NUMBER);
+        int second = 1 + (int) (Math.random() * MAX_NUMBER);
 
         int divisor = getGCD(first, second);
 

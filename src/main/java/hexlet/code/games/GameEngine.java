@@ -7,9 +7,9 @@ public final class GameEngine {
     private final Game game;
     private final String userName;
 
-    public GameEngine(Game game, String userName) {
-        this.game = game;
-        this.userName = userName;
+    public GameEngine(Game selectedGame, String name) {
+        this.game = selectedGame;
+        this.userName = name;
     }
 
     private static void showLoseMessage(String correctAnswer, String answer, String userName) {
@@ -18,7 +18,7 @@ public final class GameEngine {
     }
 
     private static void showWinMessage(String userName) {
-        System.out.println("Congratulations, " + userName);
+        System.out.println("Congratulations, " + userName + "!");
     }
 
     private void showDescription() {
