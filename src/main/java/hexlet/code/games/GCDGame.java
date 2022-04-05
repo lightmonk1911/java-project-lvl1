@@ -33,10 +33,10 @@ public final class GCDGame implements Game {
         int first = (int) (Math.random() * MAX_NUMBER);
         int second = (int) (Math.random() * MAX_NUMBER);
 
-        int GCD = getGCD(first, second);
+        int divisor = getGCD(first, second);
 
         String questionText = first + " " + second;
-        String answer = String.valueOf(GCD);
+        String answer = String.valueOf(divisor);
 
         return new Question(questionText, answer);
     }
