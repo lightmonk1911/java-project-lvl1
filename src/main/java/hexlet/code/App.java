@@ -4,12 +4,13 @@ import java.util.Scanner;
 
 import hexlet.code.games.CalcGame;
 import hexlet.code.games.EvenGame;
+import hexlet.code.games.GCDGame;
 import hexlet.code.games.Game;
 import hexlet.code.games.GameEngine;
 
 public class App {
     private static final String GREET_KEY = "Greet";
-    private static final String[] GAMES = {GREET_KEY, EvenGame.KEY, CalcGame.KEY};
+    private static final String[] GAMES = {GREET_KEY, EvenGame.KEY, CalcGame.KEY, GCDGame.KEY};
 
     public static void showMenu() {
         System.out.println("Please enter the game number and press Enter.");
@@ -49,6 +50,10 @@ public class App {
 
             case (CalcGame.KEY) -> {
                 game = new CalcGame();
+            }
+
+            case (GCDGame.KEY) -> {
+                game = new GCDGame();
             }
 
             case (GREET_KEY) -> {

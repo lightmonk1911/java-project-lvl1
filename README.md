@@ -8,3 +8,6 @@ https://asciinema.org/a/FoslLFosPoBhYJ1vCZxpHGwBN
 
 #### How to play "Calc" game:
 https://asciinema.org/a/VHlJYMdeYOesHEIp5tO2L8Flw
+
+#### How to play "GCD" game:
+https://asciinema.org/a/Gx3Oxx6w4W5gidfbeFnmoqBLW
