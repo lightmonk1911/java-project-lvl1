@@ -14,3 +14,6 @@ https://asciinema.org/a/Gx3Oxx6w4W5gidfbeFnmoqBLW
 
 #### How to play "Progression" game:
 https://asciinema.org/a/XywgxwXQsf4kRZoRlY5BairRE
+
+#### How to play "Prime" game:
+https://asciinema.org/a/QOiA2LXyLludXbGpasbCIQ0yI

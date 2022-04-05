@@ -7,11 +7,19 @@ import hexlet.code.games.EvenGame;
 import hexlet.code.games.GCDGame;
 import hexlet.code.games.Game;
 import hexlet.code.games.GameEngine;
+import hexlet.code.games.PrimeGame;
 import hexlet.code.games.ProgressionGame;
 
 public class App {
     private static final String GREET_KEY = "Greet";
-    private static final String[] GAMES = {GREET_KEY, EvenGame.KEY, CalcGame.KEY, GCDGame.KEY, ProgressionGame.KEY};
+    private static final String[] GAMES = {
+        GREET_KEY,
+        EvenGame.KEY,
+        CalcGame.KEY,
+        GCDGame.KEY,
+        ProgressionGame.KEY,
+        PrimeGame.KEY
+    };
 
     public static void showMenu() {
         System.out.println("Please enter the game number and press Enter.");
@@ -59,6 +67,10 @@ public class App {
 
             case (ProgressionGame.KEY) -> {
                 game = new ProgressionGame();
+            }
+
+            case (PrimeGame.KEY) -> {
+                game = new PrimeGame();
             }
 
             case (GREET_KEY) -> {
