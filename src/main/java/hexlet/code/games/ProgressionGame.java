@@ -1,6 +1,8 @@
 package hexlet.code.games;
 
-public final class ProgressionGame implements Game {
+import hexlet.code.GameEngine;
+
+public final class ProgressionGame {
     public static final String KEY = "Progression";
     private static final int MIN_LENGTH = 5;
     private static final int MAX_LENGTH = 15;
@@ -9,13 +11,12 @@ public final class ProgressionGame implements Game {
     private static final int MAX_SEED = 50;
     private static final String DESCRIPTION = "What number is missing in the progression?";
 
-    @Override
-    public Question nextQuestion() {
+    private static String[] nextQuestion() {
         int length = MIN_LENGTH + ((int) (Math.random() * (MAX_LENGTH - MIN_LENGTH)));
         String[] progression = new String[length];
 
         int seed = (int) (Math.random() * MAX_SEED);
-        int step = MIN_STEP +  (int) (Math.random() * (MAX_STEP - MIN_STEP));
+        int step = MIN_STEP + (int) (Math.random() * (MAX_STEP - MIN_STEP));
         int indexOfHidden = (int) (Math.random() * length);
 
         String answer = null;
@@ -31,11 +32,16 @@ public final class ProgressionGame implements Game {
 
         String questionText = String.join(" ", progression);
 
-        return new Question(questionText, answer);
+        return new String[]{questionText, answer};
     }
 
-    @Override
-    public String getDescription() {
-        return DESCRIPTION;
+    public static void play() {
+        String[][] questions = new String[GameEngine.CORRECT_ANSWER_TO_WIN_COUNT][2];
+
+        for (int i = 0; i < questions.length; i++) {
+            questions[i] = nextQuestion();
+        }
+
+        GameEngine.play(DESCRIPTION, questions);
     }
 }

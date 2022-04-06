@@ -5,8 +5,6 @@ import java.util.Scanner;
 import hexlet.code.games.CalcGame;
 import hexlet.code.games.EvenGame;
 import hexlet.code.games.GCDGame;
-import hexlet.code.games.Game;
-import hexlet.code.games.GameEngine;
 import hexlet.code.games.PrimeGame;
 import hexlet.code.games.ProgressionGame;
 
@@ -51,40 +49,14 @@ public class App {
             return;
         }
 
-        Game game;
         switch (gameKey) {
-            case (EvenGame.KEY) -> {
-                game = new EvenGame();
-            }
-
-            case (CalcGame.KEY) -> {
-                game = new CalcGame();
-            }
-
-            case (GCDGame.KEY) -> {
-                game = new GCDGame();
-            }
-
-            case (ProgressionGame.KEY) -> {
-                game = new ProgressionGame();
-            }
-
-            case (PrimeGame.KEY) -> {
-                game = new PrimeGame();
-            }
-
-            case (GREET_KEY) -> {
-                Cli.meetUser();
-                return;
-            }
-
-            default -> {
-                return;
-            }
+            case (EvenGame.KEY) -> EvenGame.play();
+            case (CalcGame.KEY) -> CalcGame.play();
+            case (GCDGame.KEY) -> GCDGame.play();
+            case (PrimeGame.KEY) -> PrimeGame.play();
+            case (ProgressionGame.KEY) -> ProgressionGame.play();
+            case (GREET_KEY) -> Cli.meetUser();
+            default -> throw new RuntimeException("Unknown game key: '" + gameKey + "'");
         }
-
-        String userName = Cli.meetUser();
-        GameEngine gameEngine = new GameEngine(game, userName);
-        gameEngine.play();
     }
 }
