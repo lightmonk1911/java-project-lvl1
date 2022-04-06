@@ -19,7 +19,7 @@ public class App {
         PrimeGame.KEY
     };
 
-    public static void showMenu() {
+    private static void showMenu() {
         System.out.println("Please enter the game number and press Enter.");
 
         for (int i = 0; i < GAMES.length; i++) {
@@ -29,7 +29,7 @@ public class App {
         System.out.println("0 - Exit");
     }
 
-    public static String askUserToSelectGame() {
+    private static String askUserToSelectGame() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Your choice: ");
         int gameNumber = scanner.nextInt();
