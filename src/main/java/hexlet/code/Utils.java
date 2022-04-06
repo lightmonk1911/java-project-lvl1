@@ -8,4 +8,8 @@ public final class Utils {
     public static int randomInt(int max) {
         return randomInt(0, max);
     }
+
+    public static int randomNatural(int max) {
+        return randomInt(1, max);
+    }
 }

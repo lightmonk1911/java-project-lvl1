@@ -32,8 +32,8 @@ public final class GCDGame {
     }
 
     private static String[] nextQuestion() {
-        int first = Utils.randomInt(1, MAX_NUMBER);
-        int second = Utils.randomInt(1, MAX_NUMBER);
+        int first = Utils.randomNatural(MAX_NUMBER);
+        int second = Utils.randomNatural(MAX_NUMBER);
 
         int divisor = getGCD(first, second);
 

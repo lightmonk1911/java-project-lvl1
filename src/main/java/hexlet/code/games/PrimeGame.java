@@ -19,7 +19,7 @@ public final class PrimeGame {
     }
 
     private static String[] nextQuestion() {
-        int number = Utils.randomInt(1, MAX_NUMBER);
+        int number = Utils.randomNatural(MAX_NUMBER);
         String correctAnswer = isPrime(number) ? "yes" : "no";
         return new String[]{String.valueOf(number), correctAnswer};
     }
