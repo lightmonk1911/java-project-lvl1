@@ -1,6 +1,7 @@
 package hexlet.code.games;
 
 import hexlet.code.GameEngine;
+import hexlet.code.Utils;
 
 public final class ProgressionGame {
     public static final String KEY = "Progression";
@@ -12,12 +13,12 @@ public final class ProgressionGame {
     private static final String DESCRIPTION = "What number is missing in the progression?";
 
     private static String[] nextQuestion() {
-        int length = MIN_LENGTH + ((int) (Math.random() * (MAX_LENGTH - MIN_LENGTH)));
+        int length = Utils.randomInt(MIN_LENGTH, MAX_LENGTH);
         String[] progression = new String[length];
 
-        int seed = (int) (Math.random() * MAX_SEED);
-        int step = MIN_STEP + (int) (Math.random() * (MAX_STEP - MIN_STEP));
-        int indexOfHidden = (int) (Math.random() * length);
+        int seed = Utils.randomInt(MAX_SEED);
+        int step = Utils.randomInt(MIN_STEP, MAX_STEP);
+        int indexOfHidden = Utils.randomInt(length);
 
         String answer = null;
         for (int i = 0; i < length; i++) {
