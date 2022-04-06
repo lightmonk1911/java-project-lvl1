@@ -4,16 +4,16 @@
 [![Build status](https://github.com/lightmonk1911/java-project-lvl1/workflows/build/badge.svg)](https://github.com/lightmonk1911/java-project-lvl1/actions)
 
 #### How to play "Even" game:
-https://asciinema.org/a/FoslLFosPoBhYJ1vCZxpHGwBN
+[![asciicast](https://asciinema.org/a/FoslLFosPoBhYJ1vCZxpHGwBN.png)](https://asciinema.org/a/FoslLFosPoBhYJ1vCZxpHGwBN)
 
 #### How to play "Calc" game:
-https://asciinema.org/a/VHlJYMdeYOesHEIp5tO2L8Flw
+[![asciicast](https://asciinema.org/a/VHlJYMdeYOesHEIp5tO2L8Flw.png)](https://asciinema.org/a/VHlJYMdeYOesHEIp5tO2L8Flw)
 
 #### How to play "GCD" game:
-https://asciinema.org/a/Gx3Oxx6w4W5gidfbeFnmoqBLW
+[![asciicast](https://asciinema.org/a/Gx3Oxx6w4W5gidfbeFnmoqBLW.png)](https://asciinema.org/a/Gx3Oxx6w4W5gidfbeFnmoqBLW)
 
 #### How to play "Progression" game:
-https://asciinema.org/a/XywgxwXQsf4kRZoRlY5BairRE
+[![asciicast](https://asciinema.org/a/XywgxwXQsf4kRZoRlY5BairRE.png)](https://asciinema.org/a/XywgxwXQsf4kRZoRlY5BairRE)
 
 #### How to play "Prime" game:
-https://asciinema.org/a/QOiA2LXyLludXbGpasbCIQ0yI
+[![asciicast](https://asciinema.org/a/QOiA2LXyLludXbGpasbCIQ0yI.png)](https://asciinema.org/a/QOiA2LXyLludXbGpasbCIQ0yI)
