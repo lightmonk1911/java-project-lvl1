@@ -55,7 +55,7 @@ public class App {
             case (GCDGame.KEY) -> GCDGame.play();
             case (PrimeGame.KEY) -> PrimeGame.play();
             case (ProgressionGame.KEY) -> ProgressionGame.play();
-            case (GREET_KEY) -> Cli.meetUser();
+            case (GREET_KEY) -> Cli.greet();
             default -> throw new RuntimeException("Unknown game key: '" + gameKey + "'");
         }
     }

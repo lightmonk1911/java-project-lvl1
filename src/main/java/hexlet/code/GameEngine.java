@@ -19,10 +19,12 @@ public final class GameEngine {
     }
 
     public static void play(String description, String[][] questions) {
-        String userName = Cli.meetUser();
-        showDescription(description);
-
+        System.out.println("Welcome to the Brain Games!");
         Scanner scanner = new Scanner(System.in);
+        System.out.print("May I have your name? ");
+        String userName = scanner.next();
+
+        showDescription(description);
 
         for (String[] question : questions) {
             String questionText = question[0];
