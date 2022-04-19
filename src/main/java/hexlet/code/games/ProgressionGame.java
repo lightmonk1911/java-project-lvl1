@@ -12,7 +12,7 @@ public final class ProgressionGame {
     private static final int MAX_SEED = 50;
     private static final String DESCRIPTION = "What number is missing in the progression?";
 
-    private static String[] nextQuestion() {
+    private static String[] nextQuestionAnswerPair() {
         int length = Utils.randomInt(MIN_LENGTH, MAX_LENGTH);
         String[] progression = new String[length];
 
@@ -37,12 +37,12 @@ public final class ProgressionGame {
     }
 
     public static void play() {
-        String[][] questions = new String[GameEngine.CORRECT_ANSWER_TO_WIN_COUNT][2];
+        String[][] questionAnswerPairs = new String[GameEngine.CORRECT_ANSWER_TO_WIN_COUNT][2];
 
-        for (int i = 0; i < questions.length; i++) {
-            questions[i] = nextQuestion();
+        for (int i = 0; i < questionAnswerPairs.length; i++) {
+            questionAnswerPairs[i] = nextQuestionAnswerPair();
         }
 
-        GameEngine.play(DESCRIPTION, questions);
+        GameEngine.play(DESCRIPTION, questionAnswerPairs);
     }
 }

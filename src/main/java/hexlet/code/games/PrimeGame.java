@@ -9,6 +9,10 @@ public final class PrimeGame {
     private static final int MAX_NUMBER = 100;
 
     private static boolean isPrime(int n) {
+        if (n < 2) {
+            return false;
+        }
+
         for (int i = 2; i <= (int) Math.sqrt(n); i++) {
             if (n % i == 0) {
                 return false;
@@ -18,19 +22,19 @@ public final class PrimeGame {
         return true;
     }
 
-    private static String[] nextQuestion() {
+    private static String[] nextQuestionAnswerPair() {
         int number = Utils.randomNatural(MAX_NUMBER);
         String correctAnswer = isPrime(number) ? "yes" : "no";
         return new String[]{String.valueOf(number), correctAnswer};
     }
 
     public static void play() {
-        String[][] questions = new String[GameEngine.CORRECT_ANSWER_TO_WIN_COUNT][2];
+        String[][] questionAnswerPairs = new String[GameEngine.CORRECT_ANSWER_TO_WIN_COUNT][2];
 
-        for (int i = 0; i < questions.length; i++) {
-            questions[i] = nextQuestion();
+        for (int i = 0; i < questionAnswerPairs.length; i++) {
+            questionAnswerPairs[i] = nextQuestionAnswerPair();
         }
 
-        GameEngine.play(DESCRIPTION, questions);
+        GameEngine.play(DESCRIPTION, questionAnswerPairs);
     }
 }

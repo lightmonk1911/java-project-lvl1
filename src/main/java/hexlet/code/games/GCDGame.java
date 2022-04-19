@@ -31,7 +31,7 @@ public final class GCDGame {
         return divisor;
     }
 
-    private static String[] nextQuestion() {
+    private static String[] nextQuestionAnswerPair() {
         int first = Utils.randomNatural(MAX_NUMBER);
         int second = Utils.randomNatural(MAX_NUMBER);
 
@@ -44,12 +44,12 @@ public final class GCDGame {
     }
 
     public static void play() {
-        String[][] questions = new String[GameEngine.CORRECT_ANSWER_TO_WIN_COUNT][2];
+        String[][] questionAnswerPairs = new String[GameEngine.CORRECT_ANSWER_TO_WIN_COUNT][2];
 
-        for (int i = 0; i < questions.length; i++) {
-            questions[i] = nextQuestion();
+        for (int i = 0; i < questionAnswerPairs.length; i++) {
+            questionAnswerPairs[i] = nextQuestionAnswerPair();
         }
 
-        GameEngine.play(DESCRIPTION, questions);
+        GameEngine.play(DESCRIPTION, questionAnswerPairs);
     }
 }

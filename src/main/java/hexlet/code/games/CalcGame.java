@@ -10,7 +10,7 @@ public final class CalcGame {
     private static final String[] OPERATORS = {"+", "-", "*"};
     private static final int MAX_NUMBER = 10;
 
-    private static String[] nextQuestion() {
+    private static String[] nextQuestionAnswerPair() {
         int operatorIndex = Utils.randomInt(OPERATORS.length);
         String operator = OPERATORS[operatorIndex];
         int left = Utils.randomInt(MAX_NUMBER);
@@ -28,12 +28,12 @@ public final class CalcGame {
     }
 
     public static void play() {
-        String[][] questions = new String[GameEngine.CORRECT_ANSWER_TO_WIN_COUNT][2];
+        String[][] questionAnswerPairs = new String[GameEngine.CORRECT_ANSWER_TO_WIN_COUNT][2];
 
-        for (int i = 0; i < questions.length; i++) {
-            questions[i] = nextQuestion();
+        for (int i = 0; i < questionAnswerPairs.length; i++) {
+            questionAnswerPairs[i] = nextQuestionAnswerPair();
         }
 
-        GameEngine.play(DESCRIPTION, questions);
+        GameEngine.play(DESCRIPTION, questionAnswerPairs);
     }
 }
